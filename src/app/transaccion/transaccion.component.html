@@ -1,0 +1,48 @@
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+
+    <ng-container matColumnDef="idTransaccion">
+        <th mat-header-cell *matHeaderCellDef> ID </th>
+        <td mat-cell *matCellDef="let element"> {{element.idTransaccion}} </td>
+      </ng-container>
+
+    <ng-container matColumnDef="pan">
+      <th mat-header-cell *matHeaderCellDef> PAN </th>
+      <td mat-cell *matCellDef="let element"> {{element.pan}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="numReferencia">
+      <th mat-header-cell *matHeaderCellDef> Número de Referencia </th>
+      <td mat-cell *matCellDef="let element"> {{element.numReferencia}} </td>
+    </ng-container>
+    
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="totalCompra">
+      <th mat-header-cell *matHeaderCellDef> Total Compra </th>
+      <td mat-cell *matCellDef="let element"> {{element.totalCompra}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="direccionCompra">
+        <th mat-header-cell *matHeaderCellDef> Dirección de la Compra </th>
+        <td mat-cell *matCellDef="let element"> {{element.direccionCompra}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="estadoCompra">
+        <th mat-header-cell *matHeaderCellDef> Estado Compra </th>
+        <td mat-cell *matCellDef="let element"> {{element.estadoCompra}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="fecha">
+        <th mat-header-cell *matHeaderCellDef> Fecha </th>
+        <td mat-cell *matCellDef="let element"> {{element.fecha}} </td>
+      </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
